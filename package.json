@@ -1,0 +1,9 @@
+{
+  "name": "whistle.comboshot",
+  "version": "1.0.1",
+  "description": "combo request & merge response",
+  "main": "index.js",
+  "scripts": {},
+  "author": "chengzhen",
+  "license": "ISC"
+}
