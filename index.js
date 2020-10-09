@@ -8,7 +8,7 @@ module.exports = server => {
 }
 
 /*
-  @params: comboUrl: comboshot://x.x.x.x:8080/build/??lang/id.js,social-accounts.js
+  @params: comboUrl: comboshot://http://x.x.x.x:8080/build/??lang/id.js,social-accounts.js
   @return: [//x.x.x.x:8080/build/lang/id.js, 
     //x.x.x.x:8080/build/social-accounts.js]
 */
