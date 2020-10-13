@@ -17,7 +17,6 @@ function splitUrl (comboUrl) {
   return compose.split(",").map(item => prefix + item);
 }
 
-
 async function mergeRes (url) {
   let urlList = splitUrl(url);
   let result = await Promise.all(urlList.map(url => request(url)));
