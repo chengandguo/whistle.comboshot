@@ -1,6 +1,6 @@
 {
   "name": "whistle.comboshot",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "combo request & merge response",
   "main": "index.js",
   "scripts": {},
