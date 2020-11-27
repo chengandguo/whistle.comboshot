@@ -20,7 +20,7 @@ function splitUrl (comboUrl) {
 async function mergeRes (url) {
   let urlList = splitUrl(url);
   let result = await Promise.all(urlList.map(url => request(url)));
-  return result.join("");
+  return result.join(";\n");
 }
 
 function request(url) {
