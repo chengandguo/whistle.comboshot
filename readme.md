@@ -6,7 +6,7 @@
 // 30.18.110.44/build/language/en.js  
 这个时候，我们可以使用该插件来将多个本地服务的响应合并返回给客户端，来解决这个小问题  
 
-## 配置规则
+## 配置规则 
   
 //xxx.com/source/??a.js,language/en.js comboshot://http://30.18.110.44/build/??a.js,language/en.js  
 

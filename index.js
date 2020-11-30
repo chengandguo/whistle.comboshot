@@ -1,5 +1,7 @@
 const http = require("http");
+const https = require("https");
 
+let requestLib = http;
 module.exports = server => {
   server.on("request", async (req, res) => {
     const rule = req.originalReq.ruleValue;
@@ -13,7 +15,11 @@ module.exports = server => {
     //x.x.x.x:8080/build/social-accounts.js]
 */
 function splitUrl (comboUrl) {
+  console.log(comboUrl);
   let [prefix, compose=""] = comboUrl.split("??");
+  if(prefix.includes("https")) {
+    requestLib = https;
+  }
   return compose.split(",").map(item => prefix + item);
 }
 
@@ -25,7 +31,7 @@ async function mergeRes (url) {
 
 function request(url) {
   return new Promise( (resolve, reject) => {
-    http.get(url, res => {
+    requestLib.get(url, res => {
       const { statusCode } = res;
       if(statusCode !== 200) {
         console.error(`Request Failed.Status Code: ${statusCode}`);
